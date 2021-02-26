@@ -1,5 +1,9 @@
 ## 一个简单的 Telegram 入群验证 Bot
 
+使用效果展示:(视频在 YouTube)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l9MTDzRq2jw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 如果有兴趣想要自己搭建一个验证 Bot 可以参考以下步骤。
 
 首先就是 VPS 选择：必须得是 GFW 外面的 VPS 上才能部署，要不然无法访问 Telegram 的 API，自然也无法使用相应的功能了。
