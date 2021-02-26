@@ -14,8 +14,8 @@ from captcha.image import ImageCaptcha
 from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 
 id_count = redis.StrictRedis(host='localhost',port=6379,db=5,charset='UTF-8')#临时数据存放
-auth_chat = ''#群组id
-TOKEN = ''#你的bot_TOKEN
+auth_chat = '-10011342xxxxx'#群组id
+TOKEN = '1571461630:AAHtC3BXXXXXXXXXXXXXvF-bGuRG4w8YYI'#你的bot_TOKEN
 chinese_captcha = [] #全局中文字符串集合
 user_list = [] #未验证用户集
 del_count = 0 #已删除机器人统计
@@ -138,19 +138,17 @@ while 1:
     #每3秒统计一遍未验证用户是否达到90秒限制。
     time.sleep(3)
     for i in user_list:
-        c = 0
         if id_count.ttl(i) <=20:
             try:
                 bot.deleteMessage((auth_chat,int(id_count.lrange(i,0,-1)[1].decode('utf-8'))))
                 id_count.delete(i)
                 user_list.remove(i)
                 bot.kickChatMember(auth_chat,i)
-                c = c + 1
+                del_count = del_count + 1
+                print('已移除 %s 个未完成验证的用户'%del_count)
             except:
                 pass
-        if c != 0 :
-            del_count = del_count + 1
-            print('已移除 %s 个未完成验证的用户'%del_count)
+
     
     
 
