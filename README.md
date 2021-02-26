@@ -2,7 +2,7 @@
 
 使用效果展示:(视频在 YouTube)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l9MTDzRq2jw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://youtu.be/l9MTDzRq2jw
 
 如果有兴趣想要自己搭建一个验证 Bot 可以参考以下步骤。
 
