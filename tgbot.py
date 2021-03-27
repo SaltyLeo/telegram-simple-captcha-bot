@@ -132,7 +132,7 @@ def on_callback_query(msg):
 # 如果需要使用代理，取下下面这行的注释，并填写你使用的代理服务器地址（URL）。
 # telepot.api.set_proxy("http://127.0.0.1:xxxx")
 bot = telepot.Bot(TOKEN)
-MessageLoop(bot, {'chat': on_chat_message,'callback_query': on_callback_query}).run_as_thread()
+MessageLoop(bot, {'chat': on_chat_message,'callback_query': on_callback_query}).run_as_thread(allowed_updates=['chat_member','message','callback_query'])
 set_chinese()
 print ('bot 已启动 ...')
 
